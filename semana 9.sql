@@ -14,3 +14,5 @@ CREATE TABLE cliente(
 )
 
 SELECT * FROM cliente;
+--Borrar especifico
+DELETE FROM cliente WHERE nombre = 'Alex';
