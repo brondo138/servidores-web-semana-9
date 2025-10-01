@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Cliente</title>
+</head>
+<body>
+    <link rel="stylesheet" href="registroStyle.css">
+    <div class="form-container">
+        <h2>Registro de Cliente</h2>
+        <form id="formularioCliente" action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9+()\s-]{8,20}" required>
+
+            <button type="submit">Guardar Cliente</button>
+        </form>
+    </div>
+<script>
+    const form = document.getElementById('formularioCliente');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Previene la recarga
+        form.reset(); // Limpia todos los campos
+    alert('Cliente guardado (simulado).');
+    });
+</script>
+</body>
+</html>
